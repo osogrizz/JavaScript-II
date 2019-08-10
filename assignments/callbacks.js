@@ -77,6 +77,12 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+  // add duplicates
+  items.push('yo-yo', 'Notebook');
+  // test for duplicates
+  console.log(items);
+  // remove duplicates
   cb(array.filter( (item, index) => {
     return array.indexOf(item) === index;
   }));
