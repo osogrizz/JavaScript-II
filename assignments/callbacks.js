@@ -82,6 +82,6 @@ function removeDuplicates(array, cb) {
   }));
 }
 
-removeDuplicates(items, deDupe => {
-  console.log(deDupe)
+removeDuplicates(items, deDup => {
+  console.log(deDup)
 })
