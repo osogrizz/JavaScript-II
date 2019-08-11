@@ -98,7 +98,7 @@ console.log('Ch 4', ticketPriceTotal);
 // Problem 1
 // Checking to see how many shirts of any particular size are needed.
 
-const whatSize = () => {
+const whatSize = (() => {
   let amount = [];
 
   let xl3 = 0;
@@ -129,8 +129,8 @@ const whatSize = () => {
   })
   amount.push({ XL3: xl3, XL2: xl2, XL: xl, L: large, M: medium, S: small, XS: xSmall});
   console.log('Ch 5: Problem 1', amount);
-}
-whatSize();
+})();
+// strecth goal using IIFE
 
 
 // Problem 2
