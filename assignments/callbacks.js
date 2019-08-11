@@ -81,7 +81,7 @@ function removeDuplicates(array, cb) {
   // add duplicates
   items.push('yo-yo', 'Notebook');
   // test for duplicates
-  console.log(items);
+  console.log('duplicates: ', items);
   // remove duplicates
   cb(array.filter( (item, index) => {
     return array.indexOf(item) === index;
@@ -89,5 +89,5 @@ function removeDuplicates(array, cb) {
 }
 
 removeDuplicates(items, deDup => {
-  console.log(deDup)
+  console.log('duplicates removed: ', deDup)
 })

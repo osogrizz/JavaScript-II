@@ -98,8 +98,50 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// Checking to see how many shirts of any particular size are needed.
+
+const whatSize = () => {
+  let amount = [];
+
+  let xl3 = 0;
+  let xl2 = 0;
+  let xl = 0;
+  let large = 0;
+  let medium = 0;
+  let small = 0;
+  let xSmall = 0;
+
+  runners.map( size => {
+    if (size.shirt_size === '3XL') {
+      xl3++;
+    }
+    else if (size.shirt_size === '2XL') {
+      xl2++;
+    }
+    else if (size.shirt_size === 'XL') {
+      xl++;
+    }
+    else if (size.shirt_size === 'L') {
+      large++;
+    }
+    else if (size.shirt_size === 'M') {
+       medium++;
+    }
+    else if (size.shirt_size === 'S') {
+       small++;
+    }
+    else if (size.shirt_size === 'XS') {
+       xSmall++;
+    }
+  })
+  amount.push({ xl3: xl3, xl2: xl2, XL: xl, L: large, M: medium, S: small, XS: xSmall});
+  console.log(amount);
+}
+whatSize();
 
 
 // Problem 2
+
+
 
 // Problem 3
