@@ -59,7 +59,7 @@ let fullName = [];
   runners.forEach( name => {
     fullName.push(`${name.first_name} ${name.last_name}`);
   })
-console.log(fullName);
+console.log('Ch 1', fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
@@ -67,7 +67,7 @@ let allCaps = [];
   runners.map( caps => {
     allCaps.push(caps.first_name.toUpperCase());
   })
-console.log(allCaps); 
+console.log('Ch 2', allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
@@ -77,7 +77,7 @@ let largeShirts = [];
       largeShirts.push(shirt);
     }
   })
-console.log(largeShirts);
+console.log('Ch 3', largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
@@ -90,9 +90,7 @@ let ticketPriceTotal = [];
     return a + b;
   });
   
-  
-
-console.log(ticketPriceTotal);
+console.log('Ch 4', ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
@@ -129,16 +127,36 @@ const whatSize = () => {
         return xSmall++;
     }
   })
-  amount.push({ xl3: xl3, xl2: xl2, XL: xl, L: large, M: medium, S: small, XS: xSmall});
-  console.log(amount);
+  amount.push({ XL3: xl3, XL2: xl2, XL: xl, L: large, M: medium, S: small, XS: xSmall});
+  console.log('Ch 5: Problem 1', amount);
 }
 whatSize();
 
 
 // Problem 2
+// Provide a list of companies and thier donation amount organized alphabetically.
 
-
-
+let companyName = [];
+runners.map( co => {
+  companyName.push(`${co.company_name}, $${co.donation}`)
+})
+companyName.sort();
+console.log('Ch 5: Problem 2:', companyName)
 
 
 // Problem 3
+// find donors who give at least $200
+
+let topDonors = [];
+let avgDonors = [];
+
+runners.map( runner => {
+  if (runner.donation > 199) {
+    topDonors.push(`${runner.company_name}, $${runner.donation}`);
+  } else {
+    avgDonors.push(`${runner.company_name}, $${runner.donation}`)
+  }
+})
+console.log('Ch 5 Problem 3')
+console.log('Top Donors', topDonors);
+console.log('Avg Donors', avgDonors);
