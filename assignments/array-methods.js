@@ -112,26 +112,21 @@ const whatSize = () => {
   let xSmall = 0;
 
   runners.map( size => {
-    if (size.shirt_size === '3XL') {
-      xl3++;
-    }
-    else if (size.shirt_size === '2XL') {
-      xl2++;
-    }
-    else if (size.shirt_size === 'XL') {
-      xl++;
-    }
-    else if (size.shirt_size === 'L') {
-      large++;
-    }
-    else if (size.shirt_size === 'M') {
-       medium++;
-    }
-    else if (size.shirt_size === 'S') {
-       small++;
-    }
-    else if (size.shirt_size === 'XS') {
-       xSmall++;
+    switch (size.shirt_size) {
+      case '3XL':
+        return xl3++;
+      case '2XL':
+        return xl2++;
+      case 'XL':
+        return xl++;
+      case 'L':
+        return large++;
+      case 'M':
+        return medium++;
+      case 'S':
+        return small++;
+      case 'S':
+        return xSmall++;
     }
   })
   amount.push({ xl3: xl3, xl2: xl2, XL: xl, L: large, M: medium, S: small, XS: xSmall});
@@ -141,6 +136,8 @@ whatSize();
 
 
 // Problem 2
+
+
 
 
 
