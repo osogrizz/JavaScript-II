@@ -88,7 +88,7 @@ let ticketPriceTotal = [];
 
   ticketPriceTotal = ticketPriceTotal.reduce((a,b) => {
     return a + b;
-  });
+  }, 0);
   
 console.log('Ch 4', ticketPriceTotal);
 
